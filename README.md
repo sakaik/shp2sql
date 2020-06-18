@@ -1,6 +1,6 @@
 # shp2sql.py
 
-
+  This program is making SQLs for importing spatial data (shapefile) to MySQL Server.
 
 # How to use
 
