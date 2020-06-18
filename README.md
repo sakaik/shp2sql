@@ -2,6 +2,8 @@
 
   This program is making SQLs for importing spatial data (shapefile) to MySQL Server.
 
+To use this, you need Python 3.
+
 # How to use
 
 1. Prepare the shapefile. (at least you needs *.shp, *.dbf)
