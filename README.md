@@ -1,7 +1,7 @@
 # shp2sql.py
-
-  This program is making SQLs for importing spatial data (shapefile) to MySQL Server.
-
+  
+  Using this program, you can make SQL scripts for importing spatial data(shapefile) to MySQL Server.
+  
 To use this, you need Python 3.
 
 # How to use
@@ -24,18 +24,18 @@ $ ./shp2sql.py -c cp932 input.shp > output.sql
 ```
 
 
-# What's plan to next?
+# Plans for future improvements
 
-- support shape type 3
-- support shape type 23
-- change output sql ('update after insert' to 'single insert')
-- to single transaction
-- some error handlings
+- Supporting shapefile type 3
+- Supporting shapefile type 23
+- Adding some error handlings
+- Changing to an SQL script that processes in a single transaction
+- Changing to an SQL script that uses only INSERT statements(In the current version, it does UPDATE after INSERT)
+
 
 
 
 # Request for you
 
- When you find the shapefile that cause error in this program, please let me know it.
-(Other than shape type 3 and 23.)
+ Please let me know if you find a shapefile that gives you an error with this program. (Other than shape type 3 and 23.)
  
