@@ -389,7 +389,7 @@ def output_mysql_1():  #INS and UPDATE version
   ddl += "  {} GEOMETRY SRID {}\n".format(OPT.shape_column_name, OPT.srid)
   ddl += ");\n"
   print(ddl)
-  
+  print ("BEGIN;")
   #dbf file
   insbase= "INSERT INTO {} ({}) VALUES (".format(OPT.tablename, cols_for_ins)
   
@@ -414,6 +414,7 @@ def output_mysql_1():  #INS and UPDATE version
      upd += 'ST_GeomFromText("{}",{})'.format(colwktstr, OPT.srid)
      upd += " WHERE RECID={};".format(recno)
      print(upd)
+  print ("COMMIT;")
 
 
 #---------------------------------------
