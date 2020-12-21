@@ -378,7 +378,7 @@ def output_mysql_1():  #INS and UPDATE version
   if OPT.add_drop_table:
     ddl += "DROP TABLE IF EXISTS {};\n".format(OPT.tablename)
   ddl += "CREATE TABLE {}(\n".format(OPT.tablename)
-  ddl +="  RECID  INTEGER,\n"
+  ddl +="  RECID  INTEGER PRIMARY KEY,\n"
   cols_for_ins = "RECID"
   for i in range(len(DBF.columnname)):
     fieldtype = get_mysql_column_type(DBF.type[i], DBF.size[i], DBF.prec[i])
